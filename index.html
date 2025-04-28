@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/a14ae32021.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>first true love</title>
+
+    <style type="text/css">
+      @font-face {
+        font-family: digit;
+        src: url("digital-7_mono.ttf") format("truetype");
+      }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+  </head>
+
+  <body>
+    <div id="mainDiv">
+      <div id="content">
+        <div id="code">
+          <span class="comments">/**</span><br />
+          <span class="space" /><span class="comments">*THE CODE OF LOVE</span
+          ><br />
+          <span class="space" /><span class="comments">*/</span><br />
+          Hey nour !<br />
+          cha7walek <br />
+          <span class="comments">//at lycee hannabil </span><br />
+          Since that day a spark begun:<br />
+          <span class="comments">// Your face, your hair, your walk.</span
+          ><br />
+          everything about you got imprinted in my heart;<br />
+          As time went on;<br />
+          The Bond grew stronger and stronger;<br />
+          It has been a journey from infatuation to love;<br />
+          I have traveled a long way just to be able to talk to you ;<br />
+          Like, I tried to react to your post and waited for a response, but
+          there was no reply. ;<br />
+          <br /><span class="comments">// And I'm sure there will be more.</span
+          ><br />
+          But our Bond will always grow back Stronger;<br />
+          <br />
+          <br /><span class="comments">// All I want to say is:</span><br />
+          <br />
+          I wish you would accept my gift and my letter;<br />
+          <br />
+          <br />
+          Now, if you would like to know more about me, send me a "Y".And if
+          not, send me an "N" on insta .<br />
+          <br />
+          <br />To be honest, I felt like a stranger to you — like I knew
+          nothing about you, and we weren’t really classmates.
+          <br />
+          <br />I truly wish you accept my apology.<br />
+        </div>
+        <div id="loveHeart">
+          <canvas id="garden"></canvas>
+          <div id="words">
+            <div id="messages">
+              form
+              <div id="elapseClock">
+                <br />
+              </div>
+            </div>
+            <div id="loveu">
+              I FELT SOMTHING FOR U<br />
+              <div class="signature">- N</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var offsetX = $("#loveHeart").width() / 2;
+      var offsetY = $("#loveHeart").height() / 2 - 55;
+      var together = new Date();
+      together.setFullYear(2016, 8, 5);
+      together.setHours(16);
+      together.setMinutes(30);
+      together.setSeconds(0);
+      together.setMilliseconds(0);
+
+      if (!document.createElement("canvas").getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML =
+          "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none");
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+      } else {
+        setTimeout(function () {
+          startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function () {
+          timeElapse(together);
+        }, 500);
+
+        adjustCodePosition();
+        $("#code").typewriter();
+      }
+    </script>
+  </body>
+</html>
